@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/node": "^16.10.1",
     "husky": "^7.0.0",
@@ -16,15 +17,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   },
-  "lint-staged":{
-    "**/.{js,ts}":[
+  "lint-staged": {
+    "**/.{js,ts}": [
       "yarn eslint",
-      "yarn prettier --write" 
-      
+      "yarn prettier --write"
     ]
   },
-  "can be added in lint-staged":  "yarn test --watchAll=false --findRelatedTests --bail"
-
+  "can be added in lint-staged": "yarn test --watchAll=false --findRelatedTests --bail"
 }
