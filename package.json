@@ -21,8 +21,10 @@
   "lint-staged":{
     "**/.{js,ts}":[
       "yarn eslint",
-      "yarn prettier --write",
-      "yarn test --watchAll=false --findRelatedTests --bail"
+      "yarn prettier --write" 
+      
     ]
-  }
+  },
+  "can be added in lint-staged":  "yarn test --watchAll=false --findRelatedTests --bail"
+
 }
