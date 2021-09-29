@@ -24,7 +24,7 @@
     "typescript": "^4.4.3"
   },
   "lint-staged": {
-    "src/**/*.{ts}": [
+    "src/**/*.ts": [
       "yarn eslint",
       "yarn prettier --write"
     ]
