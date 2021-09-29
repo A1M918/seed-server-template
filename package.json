@@ -21,7 +21,7 @@
     "express": "^4.17.1"
   },
   "lint-staged": {
-    "**/*.{js,ts}": [
+    "./src/**/*.{js,ts}": [
       "yarn eslint",
       "yarn prettier --write"
     ]
