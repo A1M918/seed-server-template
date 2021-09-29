@@ -7,6 +7,7 @@ var express_1 = __importDefault(require("express"));
 var cors_1 = __importDefault(require("cors"));
 var app = (0, express_1.default)();
 app.use((0, cors_1.default)());
+console.log("asdasd");
 app.get('/', function (req, res) {
     res.send("Working");
 });
