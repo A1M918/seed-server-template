@@ -2,4 +2,4 @@ import {Class} from "./Class";
 
 const object = new Class();
 
-object.method();
+object.methodMultiply(10);

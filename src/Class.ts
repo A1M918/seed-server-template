@@ -5,7 +5,7 @@ export class Class implements Interface {
     constructor() {
         this.id = 10;
     }
-    method(): number {
-        return this.id;
+    methodMultiply(no: number): number {
+        return no * this.id;
     }
 }
