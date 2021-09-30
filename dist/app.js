@@ -1,5 +1,3 @@
-import {Class} from "./Class";
-
+import { Class } from "./Class";
 const object = new Class();
-
 object.method();
