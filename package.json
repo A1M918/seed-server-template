@@ -16,7 +16,6 @@
         "@types/node": "^16.6.0",
         "chai": "^4.3.4",
         "coveralls": "^3.1.1",
-        "jscoverage": "^0.6.0",
         "mocha": "^9.0.3",
         "mocha-lcov-reporter": "^1.3.0",
         "nyc": "^15.1.0",
@@ -25,7 +24,9 @@
     "scripts": {
         "prepare": "husky install",
         "test": "./node_modules/.bin/mocha --no-timeout --slow 0 -r ts-node/register 'tests/**/*.ts'",
-        "unit-test": "./node_modules/.bin/mocha --no-timeout --slow 0 -r ts-node/register 'tests/unit/*.ts'"
+        "unit-test": "./node_modules/.bin/mocha --no-timeout --slow 0 -r ts-node/register 'tests/unit/*.ts'",
+        "coverage": "COVERAGE=true nyc _mocha --no-timeout --slow 0 -r  ts-node/register 'tests/**/*.ts' --reporter mocha-lcov-reporter && yarn coveralls",
+        "coveralls": "NODE_ENV=test nyc report --reporter=lcov --reporter=text --report-dir=coverage"
     },
     "dependencies": {
         "typescript": "^4.4.3"
@@ -34,7 +35,8 @@
         "**/*.ts": [
             "yarn eslint",
             "yarn prettier --write",
-            "yarn test"
+            "yarn test",
+            "yarn coverage"
         ]
     }
 }

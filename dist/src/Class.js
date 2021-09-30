@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Class = void 0;
 class Class {
     constructor() {
-        this.id = 110;
+        this.id = 10;
     }
     methodMultiply(no) {
         return no * this.id;
