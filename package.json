@@ -34,7 +34,7 @@
         "**/*.ts": [
             "yarn eslint",
             "yarn prettier --write",
-            "yarn test --watchAll=false --findRelatedTests --bail"
+            "yarn test"
         ]
     }
 }
