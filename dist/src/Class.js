@@ -1,4 +1,7 @@
-export class Class {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Class = void 0;
+class Class {
     constructor() {
         this.id = 10;
     }
@@ -6,3 +9,4 @@ export class Class {
         return no * this.id;
     }
 }
+exports.Class = Class;
