@@ -25,7 +25,7 @@
         "prepare": "husky install",
         "test": "./node_modules/.bin/mocha --no-timeout --slow 0 -r ts-node/register 'tests/**/*.ts'",
         "unit-test": "./node_modules/.bin/mocha --no-timeout --slow 0 -r ts-node/register 'tests/unit/*.ts'",
-        "coverage": "COVERAGE=true nyc _mocha --no-timeout --slow 0 -r  ts-node/register 'tests/**/*.ts' --reporter mocha-lcov-reporter && yarn coveralls",
+        "coverage": "nyc _mocha --no-timeout --slow 0 -r  ts-node/register 'tests/**/*.ts' --reporter mocha-lcov-reporter",
         "coveralls": "NODE_ENV=test nyc report --reporter=lcov --reporter=text --report-dir=coverage"
     },
     "dependencies": {
